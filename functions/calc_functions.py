@@ -1,6 +1,3 @@
-import re
-
-
 def calc_expr(values, is_float):
     expr = change_operators(
         values, {'add': '+', 'sub': '-', 'mult': '*', 'div': '/'})
