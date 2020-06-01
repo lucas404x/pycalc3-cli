@@ -13,11 +13,14 @@ def check_expr(values, flag):
     for i in range(len(values)):
         is_floatA = is_float_number(values[i]) 
         if not values[i].isalpha() and ((is_floatA and flag != '-f') or (not is_floatA and flag == '-f')):
-            return False 
-        if flag == '-odd':
-            pass
-        elif flag == '-even':
-            pass
+            return False
+
+        if flag == '-odd' and values[i].isdigit():
+            if int(values[i]) % 2 == 0:
+                return False
+        elif flag == '-even' and values[i].isdigit():
+            if int(values[i]) % 2 != 0:
+                return False
 
         if i == len(values) - 1:
             continue
