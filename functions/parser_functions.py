@@ -14,3 +14,18 @@ def check_expr(values):
             return False
     
     return True
+
+def get_subcommands(values, subcommands, max_subcommands):
+    subcommands_ = []
+
+    # make sure it appears only once
+    for subcommand in subcommands:
+        if values.count(subcommand) > 1:
+            return -1
+        elif values.count(subcommand) == 1:
+            subcommands_.append(subcommand)
+            
+    if len(subcommands_) > max_subcommands:
+        return -1
+    
+    return subcommands_
