@@ -23,7 +23,7 @@ The challenge was from this [repository.](https://github.com/florinpop17/app-ide
 ## Example
 
 ```
-python main.py -f 3.4 add 3.2 add sub 3.2
+python main.py -f 3.4 add 3.2 sub 3.2
 > 3.4
 
 python main.py -odd 3 add 9 div 3
