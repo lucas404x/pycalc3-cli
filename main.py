@@ -29,7 +29,7 @@ def main():
         print("Usage: python main.py [-h or --help]")
         sys.exit(3)
 
-    result = calc_expr(values[start:], True if flag[0] == '-f' else False)
+    result = calc_expr(values[start:]) 
     result = int(result) if flag[0] != '-f' else result
     print(result)
     
