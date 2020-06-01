@@ -1,4 +1,4 @@
-def calc_expr(values, is_float):
+def calc_expr(values):
     expr = change_operators(
         values, {'add': '+', 'sub': '-', 'mult': '*', 'div': '/'})
     
