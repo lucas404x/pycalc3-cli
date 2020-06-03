@@ -1,6 +1,5 @@
 import re
 
-
 def check_commands(values, commands):
     for value in values:
         if not (value in commands) and not (is_number(value, int) or is_float_number(value)):
@@ -52,18 +51,9 @@ def get_flags(values, subcommands, max_subcommands):
 
     return subcommands_ if len(subcommands_) > 0 else [None]
 
-
 def is_float_number(string):
-    if len(re.findall(r'(\.)', string)) != 1:
-        return False
-    if re.search(r'(\d+\.\d+)', string) == None:
-        return False
-
-    aux = re.split(r"[^a-z]\d+\.\d+", string)
-    for i in aux:
-        if not i in (string, ''):
-            return False
-    return True
+    pattern = r'\d+\.\d+'
+    return True if re.split(pattern, string).count('') == 2 else False
 
 def is_number(value, type_):
     try:
