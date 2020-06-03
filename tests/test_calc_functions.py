@@ -5,7 +5,6 @@ from unittest import TestCase, main
 from functions.calc_functions import *
 
 class TestCalc(TestCase):
-    @classmethod
     def setUp(self):
         # calc_expr's variables
         self.__values1 = ('2', 'add', '9', 'sub', '20', 'div', '2')
